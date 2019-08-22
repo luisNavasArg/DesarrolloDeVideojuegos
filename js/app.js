@@ -36,6 +36,7 @@ const bootState = {
     		// juego.state.start('menu');
             juego.pause();
     	}
+    }
 };
 
 let juego = new Phaser.Game(1024, 572, Phaser.CANVAS, '');
