@@ -33,14 +33,29 @@ const bootState = {
             },
     update:()=>{
     	if(cargandoimagen.width < 132){cargandoimagen.width+= 1;}else if(cargandoimagen.width==132){
-    		// juego.state.start('menu');
+    		 juego.state.start('menu');
             
     	}
     }
 };
 
-let juego = new Phaser.Game(1024, 572, Phaser.CANVAS, '');
+const inicioState ={
+    preload:()=>{
+        juego.load.image('fondo', 'imagenes/fondo.png');
+        
+    },
+    create:()=>{
+        juego.add.image(0,0,'fondo');
+    },
+    update:()=>{
 
+    }
+};
+//instanciamos la clase 
+let juego = new Phaser.Game(1024, 572, Phaser.CANVAS, '');
+//agregamos los estados
 juego.state.add('play', bootState);
+juego.state.add('menu',inicioState);
+//iniciamos el estado 
 juego.state.start('play');
 
