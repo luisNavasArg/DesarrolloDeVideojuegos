@@ -34,7 +34,7 @@ const bootState = {
     update:()=>{
     	if(cargandoimagen.width < 132){cargandoimagen.width+= 1;}else if(cargandoimagen.width==132){
     		// juego.state.start('menu');
-            juego.pause();
+            
     	}
     }
 };
